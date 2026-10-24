@@ -1,0 +1,30 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+collections:
+  - name: "certificates"
+    label: "Certifications"
+    folder: "public/data/certificates"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Certificate Title", name: "title", widget: "string" }
+      - { label: "Issuing Authority", name: "issuer", widget: "string" }
+      - { label: "Issue Date", name: "date", widget: "string" }
+      - { label: "Credential Image / Badge", name: "image", widget: "image" }
+
+  - name: "projects"
+    label: "Lab Topologies & Projects"
+    folder: "public/data/projects"
+    create: true
+    extension: "json"
+    format: "json"
+    fields:
+      - { label: "Project Title", name: "title", widget: "string" }
+      - { label: "Short Description", name: "description", widget: "text" }
+      - { label: "Topology Diagram / Image", name: "image", widget: "image" }
